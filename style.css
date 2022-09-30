@@ -1,44 +1,90 @@
-*{
-    padding: 0%;
-    margin: 0%;
-}
-body{
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(90deg, rgba(0,233,255,1) 0%, rgba(110,152,255,1) 100%);
+* {
+  padding: 0%;
+  margin: 0%;
 }
 
-
-main{
-    font-size: 3rem;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: bold;
+body {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('/assets/bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
 }
 
-div{
-    background: linear-gradient(0deg, rgb(0 218 255) 0%, rgba(12,0,255,1) 100%);
-    border-radius:50%;
-    position: absolute ;
-    width: 50px;
-    height: 50px;
+button {
+  background-color: #0fa;
+  border: none;
+  padding: 1rem 2rem;
+  margin-top: 10%;
+  cursor: pointer;
 }
 
-#first{
-    animation: disappear 5s linear 0s infinite;
+button:hover{
+    background-color: #00cc88;
+    transition-duration: 1s;
+}
+
+main {
+  font-size: 4rem;
+  font-weight: bold;
+  text-align: center;
+  animation: glow 1s ease-in-out infinite alternate;
+  display: flex;
+  flex-direction: column;
+  gap: 10%;
+}
+
+div {
+  box-shadow: 0 0 20px #0fa;
+  animation: ball 10s ease-in-out infinite alternate;
+  background-color: black;
+  border-radius: 50%;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+}
+
+#first {
+  animation: disappear 5s linear 0s infinite;
+  animation: ball 10s ease-in-out infinite alternate;
 }
 
 @keyframes disappear {
-    50%{
-        opacity: 1;
-    }
-    55%{
-        opacity: 0;
-    }
-    60%{
-        opacity: 1;
-    }
+  50% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #0fa, 0 0 40px #0fa,
+      0 0 50px #0fa, 0 0 60px #0fa, 0 0 70px #0fa;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #0fa, 0 0 40px #0fa, 0 0 50px #0fa,
+      0 0 60px #0fa, 0 0 70px #0fa, 0 0 80px #0fa;
+  }
+}
+
+@keyframes ball {
+  from {
+    box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0fa, 0 0 20px #0fa,
+      0 0 25px #0fa, 0 0 30px #0fa, 0 0 35px #0fa;
+  }
+  to {
+    box-shadow: 0 0 10px #fff, 0 0 15px #0fa, 0 0 20px #0fa, 0 0 25px #0fa,
+      0 0 30px #0fa, 0 0 35px #0fa, 0 0 40px #0fa;
+  }
 }
