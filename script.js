@@ -3,6 +3,7 @@ const main = document.querySelector('main'); //Main
 let ball = document.querySelectorAll('body div'); //array of divs
 let sound = document.getElementById('first');
 let audio = document.getElementById('denied');
+let button = document.getElementById('play-button');
 
 // Holds the position of the balls
 let x_loc = [body.offsetWidth / 2 - 51];
@@ -54,6 +55,7 @@ function generate_ball() {
 setInterval(() => {
   for (let i = 0; i < ball.length; i++) run(i);
   if (ball.length != 1) main.innerHTML = ball.length - 1;
+  if (main.innerHTML % 10 == 0) document.getElementById('score').play();
 }, 10);
 
 function run(i) {
@@ -87,4 +89,6 @@ sound.addEventListener('mouseenter', () => {
 
 button.addEventListener('click', function () {
   document.getElementById('enter').play();
+  document.getElementById('music').play();
+  document.getElementById('score').volume = 5.0;
 });
