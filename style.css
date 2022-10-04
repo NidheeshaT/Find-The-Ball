@@ -2,12 +2,12 @@
   padding: 0%;
   margin: 0%;
 }
-html{
-    position: fixed;
-    width: 100%;
-    height: 100%;
+html {
+  position: fixed;
+  width: 100%;
+  height: 100%;
 }
-body{
+body {
   width: 100%;
   height: 100%;
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
@@ -15,7 +15,7 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url('/assets/bg.jpg');
+  background-image: url('./assets/bg.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   color: white;
@@ -29,9 +29,9 @@ button {
   cursor: pointer;
 }
 
-button:hover{
-    background-color: #00cc88;
-    transition-duration: 1s;
+button:hover {
+  background-color: #00cc88;
+  transition-duration: 1s;
 }
 
 main {
@@ -55,8 +55,8 @@ div {
 }
 
 #first {
-  animation: disappear 5s linear 0s infinite;
-  animation: ball 10s ease-in-out infinite alternate;
+  animation: disappear 5s linear 0s infinite,
+    ball 10s ease-in-out infinite alternate;
 }
 
 @keyframes disappear {
@@ -64,7 +64,7 @@ div {
     opacity: 1;
   }
   55% {
-    opacity: 0;
+    opacity: 0.5;
   }
   60% {
     opacity: 1;
